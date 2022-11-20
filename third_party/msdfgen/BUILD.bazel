@@ -1,0 +1,21 @@
+cc_library(
+    name = "msdfgen",
+    srcs = glob([
+        "core/*.cpp",
+        "core/*.h",
+        "core/*.hpp",
+    ]) + [
+        "ext/import-font.cpp",
+    ],
+    hdrs = [
+        "msdfgen.h",
+        "ext/import-font.h",
+    ],
+    copts = [
+    ],
+    includes = [".", "core", "msdfgen"],
+    visibility = ["//visibility:public"],
+    deps = [
+      "@freetype",  
+    ],
+)

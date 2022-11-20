@@ -146,7 +146,7 @@ bool exportJSON(const FontGeometry *fonts, int fontCount, double fontSize, doubl
             bool firstPair = true;
             switch (font.getPreferredIdentifierType()) {
                 case GlyphIdentifierType::GLYPH_INDEX:
-                    for (const std::pair<std::pair<int, int>, double> &kernPair : font.getKerning()) {
+                    for (const std::pair<std::pair<int, int>, double> kernPair : font.getKerning()) {
                         fputs(firstPair ? "{" : ",{", f);
                         fprintf(f, "\"index1\":%d,", kernPair.first.first);
                         fprintf(f, "\"index2\":%d,", kernPair.first.second);
@@ -156,7 +156,7 @@ bool exportJSON(const FontGeometry *fonts, int fontCount, double fontSize, doubl
                     }
                     break;
                 case GlyphIdentifierType::UNICODE_CODEPOINT:
-                    for (const std::pair<std::pair<int, int>, double> &kernPair : font.getKerning()) {
+                    for (const std::pair<std::pair<int, int>, double> kernPair : font.getKerning()) {
                         const GlyphGeometry *glyph1 = font.getGlyph(msdfgen::GlyphIndex(kernPair.first.first));
                         const GlyphGeometry *glyph2 = font.getGlyph(msdfgen::GlyphIndex(kernPair.first.second));
                         if (glyph1 && glyph2 && glyph1->getCodepoint() && glyph2->getCodepoint()) {

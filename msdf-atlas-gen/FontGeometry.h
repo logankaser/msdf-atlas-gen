@@ -6,7 +6,7 @@
 #include <string>
 #include <map>
 #include <msdfgen.h>
-#include <msdfgen-ext.h>
+#include <ext/import-font.h>
 #include "types.h"
 #include "GlyphGeometry.h"
 #include "Charset.h"

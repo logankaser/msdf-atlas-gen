@@ -2,7 +2,7 @@
 #pragma once
 
 #include <msdfgen.h>
-#include <msdfgen-ext.h>
+#include <ext/import-font.h>
 #include "types.h"
 #include "Rectangle.h"
 #include "GlyphBox.h"

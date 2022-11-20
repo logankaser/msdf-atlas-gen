@@ -1,0 +1,22 @@
+load("@rules_cc//cc:defs.bzl", "cc_binary")
+
+cc_library(
+    name = "msdf-atlas-gen",
+    srcs = glob([
+        "msdf-atlas-gen/*.cpp",
+        "msdf-atlas-gen/*.h",
+        "msdf-atlas-gen/*.hpp"
+    ],
+    [
+        "msdf-atlas-gen/main.cpp",
+        "msdf-atlas-gen/msdf-atlas-gen.h",
+    ]),
+    hdrs = ["msdf-atlas-gen/msdf-atlas-gen.h"],
+    defines = ["MSDFGEN_USE_CPP11", "MSDF_ATLAS_STANDALONE"],
+    linkopts = ["-lpthread"],
+    includes = ["msdf-atlas-gen"],
+    deps = [
+        "@freetype",
+        "@msdfgen",
+    ],
+)

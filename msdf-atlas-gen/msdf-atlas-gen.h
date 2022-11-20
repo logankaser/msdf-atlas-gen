@@ -11,7 +11,6 @@
  */
 
 #include <msdfgen.h>
-#include <msdfgen-ext.h>
 
 #include "types.h"
 #include "utf8.h"
@@ -32,11 +31,7 @@
 #include "ImmediateAtlasGenerator.h"
 #include "DynamicAtlas.h"
 #include "glyph-generators.h"
-#include "image-encode.h"
-#include "image-save.h"
-#include "artery-font-export.h"
 #include "csv-export.h"
 #include "json-export.h"
-#include "shadron-preview-generator.h"
 
 #define MSDF_ATLAS_VERSION "1.2"
