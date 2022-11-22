@@ -1,7 +1,7 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary")
 
 cc_library(
-    name = "msdf-atlas-gen",
+    name = "msdf_atlas_gen",
     srcs = glob([
         "msdf-atlas-gen/*.cpp",
         "msdf-atlas-gen/*.h",
@@ -19,4 +19,6 @@ cc_library(
         "@freetype",
         "@msdfgen",
     ],
+    visibility = ["//visibility:public"],
 )
+

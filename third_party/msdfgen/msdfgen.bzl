@@ -4,7 +4,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 def msdfgen_workspace():
     http_archive(
         name = "msdfgen",
-        #sha256 = "6d4d6640ca3121620995ee255945161821218752b551a1a180f4215f7d124d45",
+        sha256 = "dd3880241bb38473ebefe16edfe43610bfb35c314cba12826eddd81775be267d",
         build_file = "//third_party/msdfgen:BUILD.bazel",
         strip_prefix = "msdfgen-1.9.2",
         urls = [
