@@ -30,6 +30,7 @@ cc_library(
     hdrs = ["zlib.h"],
     copts = [
         "-Wno-implicit-function-declaration",
+        "-Wno-deprecated-non-prototype",
     ],
     includes = ["."],
     visibility = ["//visibility:public"],

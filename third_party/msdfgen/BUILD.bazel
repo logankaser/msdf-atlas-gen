@@ -6,9 +6,15 @@ cc_library(
         "core/*.hpp",
     ]) + [
         "ext/import-font.cpp",
+        "ext/resolve-shape-geometry.cpp",
+        "ext/resolve-shape-geometry.h",
+        "ext/save-png.h",
+        "ext/import-svg.h",
     ],
     hdrs = [
         "msdfgen.h",
+        "msdfgen-ext.h",
+        "msdfgen-config.h",
         "ext/import-font.h",
     ],
     copts = [

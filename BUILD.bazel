@@ -12,7 +12,11 @@ cc_library(
         "msdf-atlas-gen/msdf-atlas-gen.h",
     ]),
     hdrs = ["msdf-atlas-gen/msdf-atlas-gen.h"],
-    defines = ["MSDFGEN_USE_CPP11", "MSDF_ATLAS_STANDALONE"],
+    defines = [
+        "MSDFGEN_USE_CPP11",
+        "MSDF_ATLAS_STANDALONE",
+        "MSDF_ATLAS_NO_ARTERY_FONT",
+    ],
     linkopts = ["-lpthread"],
     includes = ["msdf-atlas-gen"],
     deps = [

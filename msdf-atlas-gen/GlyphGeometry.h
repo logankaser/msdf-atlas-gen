@@ -2,7 +2,7 @@
 #pragma once
 
 #include <msdfgen.h>
-#include <ext/import-font.h>
+#include <msdfgen-ext.h>
 #include "types.h"
 #include "Rectangle.h"
 #include "GlyphBox.h"
@@ -20,7 +20,8 @@ public:
     /// Applies edge coloring to glyph shape
     void edgeColoring(void (*fn)(msdfgen::Shape &, double, unsigned long long), double angleThreshold, unsigned long long seed);
     /// Computes the dimensions of the glyph's box as well as the transformation for the generator function
-    void wrapBox(double scale, double range, double miterLimit);
+    void wrapBox(double scale, double range, double miterLimit, bool alignOrigin = false);
+    void wrapBox(double scale, double range, double miterLimit, bool alignOriginX, bool alignOriginY);
     /// Sets the glyph's box's position in the atlas
     void placeBox(int x, int y);
     /// Sets the glyph's box's rectangle in the atlas

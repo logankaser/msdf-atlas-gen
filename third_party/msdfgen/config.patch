@@ -1,0 +1,33 @@
+diff --git a/core/base.h b/core/base.h
+index ab85c13..686f55a 100644
+--- a/core/base.h
++++ b/core/base.h
+@@ -4,7 +4,7 @@
+ // This file needs to be included first for all MSDFgen sources
+ 
+ #ifndef MSDFGEN_PUBLIC
+-#include <msdfgen/msdfgen-config.h>
++#include <msdfgen-config.h>
+ #endif
+ 
+ #include <cstddef>
+diff --git a/msdfgen-config.h b/msdfgen-config.h
+new file mode 100644
+index 0000000..55f9a1e
+--- /dev/null
++++ b/msdfgen-config.h
+@@ -0,0 +1,14 @@
++#pragma once
++
++#define MSDFGEN_PUBLIC
++#define MSDFGEN_EXT_PUBLIC
++
++#define MSDFGEN_VERSION 1.11
++#define MSDFGEN_VERSION_MAJOR 1
++#define MSDFGEN_VERSION_MINOR 11
++#define MSDFGEN_VERSION_REVISION 0
++#define MSDFGEN_COPYRIGHT_YEAR 2023
++
++// Config
++#define MSDFGEN_USE_CPP11
++#define MSDFGEN_DISABLE_PNG

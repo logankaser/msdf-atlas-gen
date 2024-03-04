@@ -4,10 +4,10 @@ def freetype_workspace():
     http_archive(
         name = "freetype",
         build_file = "//third_party/freetype:BUILD.bazel",
-        sha256 = "33a28fabac471891d0523033e99c0005b95e5618dc8ffa7fa47f9dadcacb1c9b",
-        strip_prefix = "freetype-2.8",
+        sha256 = "1ac27e16c134a7f2ccea177faba19801131116fd682efc1f5737037c5db224b5",
+        strip_prefix = "freetype-2.13.2",
         urls = [
-            "https://mirror.bazel.build/download.savannah.gnu.org/releases/freetype/freetype-2.8.tar.gz",
-            "http://download.savannah.gnu.org/releases/freetype/freetype-2.8.tar.gz",
+            "https://mirror.bazel.build/download.savannah.gnu.org/releases/freetype/freetype-2.13.2.tar.gz",
+            "https://download.savannah.gnu.org/releases/freetype/freetype-2.13.2.tar.gz"
         ],
     )
